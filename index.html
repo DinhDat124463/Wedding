@@ -59,7 +59,10 @@
 
 	</head>
 	<body>
-		
+		 <!-- Phần nhạc nền tự động phát khi trang được tải -->
+		 <audio autoplay>
+			<source src="images/TikTok.mp3" type="audio/mp3">			
+		</audio>
 	<div class="fh5co-loader"></div>
 	
 	<div id="page">
@@ -128,7 +131,7 @@
 									<h3>Nhà trai</h3>
 									<div class="event-col">
 										<i class="icon-calendar"></i>
-										<span>Ngày 04 tháng 01 năm 2025.</span>
+										<span>04/01/2025</span>
 									</div>
 									<div class="event-col">
 
@@ -144,7 +147,7 @@
 									<h3>Nhà gái</h3>
 									<div class="event-col">
 										<i class="icon-calendar"></i>
-										<span>Ngày 04 tháng 01 năm 2025.</span>
+										<span>04/01/2025</span>
 									</div>
 									<div class="event-col">
 
@@ -226,18 +229,21 @@
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					<h2>Video</h2>
-
 				</div>
 			</div>
 
 
 
-				<div class="container animate-box">
-					<div class="fh5co-video fh5co-bg" style="background-image: url(images/img_bg_3.jpg); ">
-						<a href="#" class="popup-vimeo"><i class="icon-video2"></i></a>
-						<div class="overlay"></div>
-					</div>
+			<div class="container animate-box">
+				<div class="fh5co-video fh5co-bg">
+					<video autoplay loop muted>
+						<source src="images/Download.mp4" type="video/mp4">
+					</video>
+					<a href="#" class="popup-vimeo"><i class="icon-video2"></i></a>
+					<div class="overlay"></div>
 				</div>
+			</div>
+			
 			</div>
 			
 		</div>
@@ -273,6 +279,10 @@
 	<script src="js/simplyCountdown.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
-	<center>View Source Code on <a href="https://github.com/shyamjos/wedding-website">GitHub <img src="images/github-logo.png"> </a> </center>
+	<center>
+		<p>Design by <strong>Đinh Đạt</strong></p>		
+		</a>
+	</center>
+	
 	</body>
 </html>
