@@ -59,10 +59,16 @@
 
 	</head>
 	<body>
-		 <!-- Phần nhạc nền tự động phát khi trang được tải -->
-		 <audio autoplay>
-			<source src="images/TikTok.mp3" type="audio/mp3">			
+		<audio id="background-music">
+			<source src="images/TikTok.mp3" type="audio/mp3">
 		</audio>
+		<script>
+			// Lắng nghe sự kiện click của người dùng trên toàn bộ trang
+			document.body.addEventListener('click', function() {
+				var audio = document.getElementById('background-music');
+				audio.play();  // Phát nhạc khi người dùng bấm vào màn hình
+			});
+		</script>
 	<div class="fh5co-loader"></div>
 	
 	<div id="page">
