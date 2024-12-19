@@ -1,0 +1,27 @@
+.heart {
+    min-width: 30px;
+    min-height: 30px;
+    font-size: 29px;
+    color: #E31B23;
+    position: absolute;
+    top:-15vh;
+    animation: rain-of-hearts 10s linear 1;
+}
+@keyframes rain-of-hearts {
+    0% {
+        transform: translateY(-10vh) rotateZ(0deg);
+    }
+    25% {
+        transform: translateY(27vh) rotateZ(20deg);
+    }
+    50% {
+        transform: translateY(55vh) rotateZ(-20deg);
+    }
+    75% {
+        transform: translateY(90vh) rotateZ(20deg);
+    }
+
+    100% {
+        transform: translateY(120vh) rotateZ(-20deg);
+    }
+}
