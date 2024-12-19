@@ -63,13 +63,6 @@ p {
   margin-bottom: 20px;
 }
 
-h1, h2, h3, h4, h5, h6, figure {
-  color: #000;
-  font-family: "Work Sans", Arial, sans-serif;
-  font-weight: 400;
-  margin: 0 0 20px 0;
-}
-
 ::-webkit-selection {
   color: #fff;
   background: #646464;
@@ -835,16 +828,22 @@ form label {
   display: table-cell !important;
   vertical-align: left;
   padding-top: 130px;
+  opacity: 0;
+  animation: slideIn 1s forwards; /* Thêm hiệu ứng di chuyển */
+  position: relative;
 }
-#fh5co-header .display-tc h1, #fh5co-header .display-tc h2,
-#fh5co-counter .display-tc h1,
-#fh5co-counter .display-tc h2,
-.fh5co-cover .display-tc h1,
-.fh5co-cover .display-tc h2 {
-  margin: 0;
-  padding: 0;
-  color: white;
+
+@keyframes slideIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
+
 #fh5co-header .display-tc h1,
 #fh5co-counter .display-tc h1,
 .fh5co-cover .display-tc h1 {
@@ -852,7 +851,9 @@ form label {
   font-size: 65px;
   line-height: 1.5;
   font-family: "Amsterdam", Arial, serif;
+  z-index: 2; /* Đảm bảo văn bản luôn hiển thị trên cùng */
 }
+
 @media screen and (max-width: 768px) {
   #fh5co-header .display-tc h1,
   #fh5co-counter .display-tc h1,
@@ -860,6 +861,7 @@ form label {
     font-size: 40px;
   }
 }
+
 @media screen and (max-width: 480px) {
   #fh5co-header .display-tc h1,
   #fh5co-counter .display-tc h1,
@@ -867,6 +869,7 @@ form label {
     font-size: 30px;
   }
 }
+
 #fh5co-header .display-tc h2,
 #fh5co-counter .display-tc h2,
 .fh5co-cover .display-tc h2 {
@@ -874,7 +877,9 @@ form label {
   line-height: 1.5;
   margin-top: 20px;
   font-family: Engagement;
+  transition: font-size 0.3s ease; /* Thêm hiệu ứng chuyển đổi cho font-size */
 }
+
 @media screen and (max-width: 480px) {
   #fh5co-header .display-tc h2,
   #fh5co-counter .display-tc h2,
@@ -882,6 +887,7 @@ form label {
     font-size: 16px;
   }
 }
+
 #fh5co-header .display-tc .btn,
 #fh5co-counter .display-tc .btn,
 .fh5co-cover .display-tc .btn {
@@ -892,15 +898,37 @@ form label {
   font-size: 16px;
   font-family: Sofia Sans Condensed;
   text-transform: uppercase;
+  transition: all 0.3s ease; /* Thêm hiệu ứng chuyển động */
 }
+
 #fh5co-header .display-tc .btn:hover,
 #fh5co-counter .display-tc .btn:hover,
 .fh5co-cover .display-tc .btn:hover {
-  background: #fff !important;
-  -webkit-box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75) !important;
-  -moz-box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75) !important;
+  background: #388e3c !important; /* Đổi màu nền khi hover */
+  color: #fff; /* Đổi màu chữ khi hover */
   box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75) !important;
 }
+
+#fh5co-header .display-tc:hover,
+#fh5co-counter .display-tc:hover,
+.fh5co-cover .display-tc:hover {
+  background: rgba(0, 0, 0, 0.4); /* Thêm lớp nền mờ */
+}
+
+#fh5co-header .display-tc::before,
+#fh5co-counter .display-tc::before,
+.fh5co-cover .display-tc::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('images/Anh7.jpg') center/cover no-repeat;
+  filter: blur(10px); /* Làm mờ hình nền */
+  z-index: -1; /* Đảm bảo nền mờ không che nội dung */
+}
+
 
 #fh5co-counter {
   text-align: center;
@@ -1802,4 +1830,61 @@ form label {
 
 .js .animate-box {
   opacity: 0;
+}
+/* Tải font từ Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+
+.wedding-header {
+  font-family: 'Alex Brush', cursive;
+  text-align: center; /* Canh giữa */
+  color: #ff3366; /* Màu chữ đỏ rực */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Hiệu ứng bóng đổ */
+  transition: all 0.3s ease; /* Hiệu ứng chuyển động mượt mà */
+  padding: 10px 0;
+}
+
+.wedding-header:hover {
+  color: #ff9900; /* Màu chữ sẽ chuyển sang màu vàng khi di chuột */
+  text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.7); /* Bóng đổ rõ nét hơn */
+  transform: scale(1.05); /* Hiệu ứng phóng to khi di chuột */
+}
+
+.wedding-header:nth-child(1) {
+  font-size: 36px; /* Cỡ chữ cho dòng đầu tiên */
+  color: #ff3366; /* Màu sắc rực rỡ */
+}
+
+.wedding-header:nth-child(2) {
+  font-size: 28px; /* Cỡ chữ cho dòng thứ 2 */
+  color: #ff6633; /* Màu sắc ấm áp */
+}
+
+.wedding-header:nth-child(3) {
+  font-size: 30px; /* Cỡ chữ cho dòng thứ 3 */
+  color: #ff9966; /* Màu sắc dịu dàng */
+}
+
+@media screen and (max-width: 768px) {
+  .wedding-header {
+    font-size: 24px; /* Cỡ chữ nhỏ hơn trên các thiết bị di động */
+  }
+}/* Tải font chữ từ Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Merriweather:wght@400&display=swap');
+
+/* CSS cho phần địa chỉ */
+.address {
+  font-family: 'Roboto', sans-serif; /* Font chữ dễ đọc */
+  font-size: 18px; /* Cỡ chữ vừa phải */
+  color: #333; /* Màu chữ tối cho dễ đọc */
+  line-height: 1.5; /* Khoảng cách giữa các dòng */
+  text-align: center; /* Canh giữa */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Địa chỉ sử dụng font Merriweather để tạo cảm giác trang trọng hơn */
+.address span {
+  font-family: 'Merriweather', serif; /* Font chữ trang trọng hơn */
+  font-size: 20px; /* Cỡ chữ lớn hơn cho phần quan trọng */
+  color: #2d2d2d; /* Màu sắc trung tính */
 }
