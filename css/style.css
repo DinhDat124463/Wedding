@@ -835,7 +835,7 @@ form label {
 #fh5co-header {
   background-image: url('images/Anh7.jpg');
   background-repeat: no-repeat; /* Không lặp lại ảnh */  
-  background-position: center; /* Căn giữa ảnh trong phần tử */  
+  background-position: 1100px; /* Căn giữa ảnh trong phần tử */  
 }
 @keyframes slideIn {
   from {
