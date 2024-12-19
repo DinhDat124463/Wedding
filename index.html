@@ -50,18 +50,14 @@
 
 	<!-- Owl Carousel  -->
 	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-	<link rel="stylesheet" href="css/heart.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
-	<body>
-		<script src="/js/heart.js"></script> 
-	</body>
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
-
 	</head>
+
 	<body>
 		<audio id="background-music">
 			<source src="images/TikTok.mp3" type="audio/mp3">
@@ -74,6 +70,47 @@
 			});
 		</script>
 	</nav> 
+
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+<style>
+.dg-heart:empty { display:block;}
+.dg-heart {
+  min-width: 25px;
+  min-height: 25px;
+  font-size: 21px;
+  color: #E31B23;
+  position: fixed;
+  opacity:0.8;
+  z-index:999;
+  top:-15vh;
+  animation: rain-of-hearts 12s linear 1;
+}
+@keyframes rain-of-hearts{0%{transform:translateY(-10vh) rotateZ(0)}25%{transform:translateY(27vh) rotateZ(20deg)}50%{transform:translateY(55vh) rotateZ(-20deg)}75%{transform:translateY(90vh) rotateZ(20deg)}100%{transform:translateY(120vh) rotateZ(-20deg)}}
+
+
+</style>
+
+<script defer>
+
+function createHearts () {
+  const heart  = document.createElement("div");
+  heart.classList.add("dg-heart","fa","fa-heart")
+  heart.style.left = Math.floor(Math.random()*100)+"vw"
+  heart.style.animationDuration = Math.floor(Math.random()*2)+10+"s"
+  document.body.appendChild(heart)
+}
+setInterval(createHearts,500);
+var heart = document.getElementsByClassName("dg-heart")
+setInterval(()=>{
+  for (let i = 0; i < heart.length; i++) {
+    if (i > 30) {
+      heart[0].remove() 
+    }   
+  }
+},300)
+
+</script>
+
 	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/Anh7.jpg);" data-stellar-background-ratio="0.5">
 		<!-- <div class="overlay"></div> -->
 		<div class="container">
