@@ -892,8 +892,8 @@ form label {
 #fh5co-counter .display-tc .btn,
 .fh5co-cover .display-tc .btn {
   padding: 20px 20px;
-  background: #fff !important;
-  color: #646464;
+  background: #388e3c !important;
+  color: white;
   border: none !important;
   font-size: 16px;
   font-family: Sofia Sans Condensed;
@@ -912,7 +912,7 @@ form label {
 #fh5co-header .display-tc:hover,
 #fh5co-counter .display-tc:hover,
 .fh5co-cover .display-tc:hover {
-  background: rgba(0, 0, 0, 0.4); /* Thêm lớp nền mờ */
+  background: transparent; /* Thêm lớp nền mờ */
 }
 
 #fh5co-header .display-tc::before,
