@@ -832,7 +832,13 @@ form label {
   animation: slideIn 1s forwards; /* Thêm hiệu ứng di chuyển */
   position: relative;
 }
-
+#fh5co-header {
+  background-image: url('images/Anh7.jpg');
+  background-repeat: no-repeat; /* Không lặp lại ảnh */
+  background-size: cover; /* Đảm bảo ảnh phủ đầy phần tử */
+  background-position: center center; /* Căn giữa ảnh trong phần tử */
+  height: 100vh; /* Đảm bảo phần tử có chiều cao bằng chiều cao của cửa sổ trình duyệt */
+}
 @keyframes slideIn {
   from {
     transform: translateY(50px);
