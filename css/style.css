@@ -1837,7 +1837,7 @@ form label {
 .wedding-header {
   font-family: 'Alex Brush', cursive;
   text-align: center; /* Canh giữa */
-  color: #ff3366; /* Màu chữ đỏ rực */
+  color: #ff9900; /* Màu chữ đỏ rực */
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Hiệu ứng bóng đổ */
   transition: all 0.3s ease; /* Hiệu ứng chuyển động mượt mà */
   padding: 10px 0;
@@ -1851,12 +1851,12 @@ form label {
 
 .wedding-header:nth-child(1) {
   font-size: 36px; /* Cỡ chữ cho dòng đầu tiên */
-  color: #ff3366; /* Màu sắc rực rỡ */
+  color: #ff9900; /* Màu sắc rực rỡ */
 }
 
 .wedding-header:nth-child(2) {
   font-size: 28px; /* Cỡ chữ cho dòng thứ 2 */
-  color: #ff6633; /* Màu sắc ấm áp */
+  color: #ff9900; /* Màu sắc ấm áp */
 }
 
 .wedding-header:nth-child(3) {
