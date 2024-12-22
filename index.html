@@ -96,12 +96,10 @@ setInterval(()=>{
 <body >
 	<audio id="background-music">
 		<source src="images/I-Do-911.mp3" type="audio/mp3">
-	</audio>
-	
+	</audio>	
 	<div id="play-button" style="text-align:center; margin-top:20px;">
 		<button onclick="startMusic()">Bấm để bật nhạc 🎵</button>
-	</div>
-	
+	</div>	
 	<script>
 		function startMusic() {
 			const music = document.getElementById('background-music');
@@ -114,12 +112,10 @@ setInterval(()=>{
 		}
 	
 		window.onload = function () {
-			const music = document.getElementById('background-music');
-	
-			// Kiểm tra nếu người dùng đã từng bật nhạc trước đó
+			const music = document.getElementById('background-music');	
 			if (localStorage.getItem('musicEnabled') === 'true') {
 				music.play().catch((error) => {
-					console.error("Trình duyệt chặn tự động phát:", error);
+					console.error("Trình duyệt chsặn tự động phát:", error);
 				});
 				document.getElementById('play-button').style.display = 'none'; // Ẩn nút nếu nhạc tự động phát
 			}
@@ -163,7 +159,7 @@ setInterval(()=>{
 							<div class="flipTimebox">
 								<div class="clock clock-fix"></div>
 							  </div>
-							<p><a href="#fh5co-event" class="btn btn-default btn-sm">Thông tin chi tiết</a></p>							
+							<p><a href="#fh5co-event" class="btn btn-default btn-sm">Chi tiết</a></p>							
 						</div>
 					</div>
 				</div>
