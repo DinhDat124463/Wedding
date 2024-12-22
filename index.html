@@ -28,8 +28,6 @@
 <meta property="og:image:secure_url" content="https://dinhdat124463.github.io/Wedding/images/Bia.jpg"/>
 <meta property="og:image:alt" content="Anh Tuấn ❤️ Hương Ly">
 
-
-
 	<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Engagement" rel="stylesheet">
@@ -56,20 +54,6 @@
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	</head>
-
-	<body>
-		<audio id="background-music">
-			<source src="images/TikTok.mp3" type="audio/mp3">
-		</audio>
-		<script>
-			// Lắng nghe sự kiện click của người dùng trên toàn bộ trang
-			document.body.addEventListener('click', function() {
-				var audio = document.getElementById('background-music');
-				audio.play();  // Phát nhạc khi người dùng bấm vào màn hình
-			});
-		</script>
-	</nav> 
-
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
 <style>
 .dg-heart:empty { display:block;}
@@ -88,7 +72,6 @@
 
 
 </style>
-
 <script defer>
 
 function createHearts () {
@@ -110,6 +93,20 @@ setInterval(()=>{
 
 </script>
 
+<body >
+	<audio id="background-music">
+		<source src="images/TikTok.mp3" type="audio/mp3">
+	</audio>
+	<script>
+		window.onload = function() {
+			var audio = document.getElementById('background-music');
+			audio.play().catch(function(error) {
+				console.log("Trình duyệt chặn tự động phát nhạc:", error);
+			});
+		};
+	</script>
+
+	
 	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/Anh7.jpg);" data-stellar-background-ratio="0.5">
 		<!-- <div class="overlay"></div> -->
 		<div class="container">
@@ -308,6 +305,6 @@ setInterval(()=>{
 		<p>Design by: <strong>Đinh Đạt</strong></p>		
 		</a>
 	</center>
+</body>
 	
-	</body>
 </html>
