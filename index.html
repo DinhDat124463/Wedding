@@ -7,6 +7,13 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Anh Tuấn ❤️ Hương Ly</title>
+
+	<script type="text/javascript">
+        window.onload = function() {
+            document.getElementById("autoRedirectButton").click(); // Tự động bấm nút khi trang tải xong
+        }
+    </script>
+
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="TRÂN TRỌNG KÍNH MỜI" />	
 	<meta name="author" content="Anh Tuấn ❤️ Hương Ly" />
@@ -96,40 +103,17 @@ setInterval(()=>{
 <body >
 	<audio id="background-music">
 		<source src="images/Westlife - Beautiful in White [1 HOUR].mp3" type="audio/mp3">
-	</audio>
-	
-	<div id="play-button" style="text-align:center; margin-top:20px;">
-		<button id="play-music-button" onclick="startMusic()">Bấm để bật nhạc 🎵</button>
-	</div>
-	
-	<script>
+	  </audio>
+	  
+	  <button id="autoRedirectButton" onclick="startMusic()">Play Music</button>
+	  
+	  <script>
 		function startMusic() {
-			const music = document.getElementById('background-music');
-			music.play().then(() => {
-				localStorage.setItem('musicEnabled', 'true');
-				document.getElementById('play-button').style.display = 'none'; // Ẩn nút sau khi phát nhạc
-			}).catch((error) => {
-				console.error("Không thể phát nhạc:", error);
-			});
+		  var audio = document.getElementById("background-music");
+		  audio.play();
 		}
-	
-		window.onload = function () {
-			const music = document.getElementById('background-music');
-	
-			// Kiểm tra nếu người dùng đã từng bật nhạc trước đó
-			if (localStorage.getItem('musicEnabled') === 'true') {
-				music.play().catch((error) => {
-					console.error("Trình duyệt chặn tự động phát:", error);
-				});
-				document.getElementById('play-button').style.display = 'none'; // Ẩn nút nếu nhạc tự động phát
-			} else {
-				// Giả lập sự kiện click vào nút sau khi trang tải xong
-				const button = document.getElementById('play-music-button');
-				button.click();
-			}
-		};
-	</script>
-
+	  </script>
+	  
 	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/Anh7.jpg);" data-stellar-background-ratio="0.5">
 		<!-- <div class="overlay"></div> -->
 		<div class="container">
@@ -293,10 +277,6 @@ setInterval(()=>{
 			
 		</div>
 	</div> -->
-	<div class="gototop js-top">
-		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
-	</div>
-
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
     <!-- clock -->
@@ -325,7 +305,7 @@ setInterval(()=>{
 	<!-- Main -->
 	<script src="js/main.js"></script>
 	<center>
-		<p>Design by: <strong>Đinh Đạt</strong></p>		
+		<p><strong><p>&copy; 2024 Anh Tuấn ❤️ Hương Ly</strong></p>		
 		</a>
 	</center>
 </body>
