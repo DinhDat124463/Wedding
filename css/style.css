@@ -1927,3 +1927,13 @@ form label {
   opacity: 1; /* Hiển thị */
   transform: translateY(0); /* Đưa lên */
 }
+#audioControlButton {
+  position: absolute;
+  top: 10px; /* Adjust as needed to position the button at the top */
+  right: 10px; /* Adjust to place the button to the right side */
+  background-color: transparent; /* Optionally make the button background transparent */
+  border: none;
+  color: white; /* Change color as needed */
+  font-size: 20px; /* Adjust the size of the icon */
+  z-index: 10; /* Ensure the button is above other content */
+}
