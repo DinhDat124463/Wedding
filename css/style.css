@@ -1891,3 +1891,39 @@ form label {
   font-size: 20px; /* Cỡ chữ lớn hơn cho phần quan trọng */
   color: #2d2d2d; /* Màu sắc trung tính */
 }
+
+/* Đặt kiểu ban đầu cho ảnh */
+#fh5co-gallery-list li {
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* Hiệu ứng khi chuột lướt qua ảnh */
+#fh5co-gallery-list li:hover {
+  transform: scale(1.05); /* Phóng to nhẹ ảnh */
+  opacity: 0.8; /* Làm mờ nhẹ */
+}
+
+/* Nội dung overlay hiển thị khi hover */
+.case-studies-summary {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7); /* Tạo nền đen mờ */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(100%); /* Ẩn ở dưới */
+  transition: all 0.4s ease; /* Hiệu ứng mượt */
+}
+
+/* Khi hover vào ảnh, nội dung hiển thị */
+#fh5co-gallery-list li:hover .case-studies-summary {
+  opacity: 1; /* Hiển thị */
+  transform: translateY(0); /* Đưa lên */
+}
