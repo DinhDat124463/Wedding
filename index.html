@@ -101,37 +101,55 @@ setInterval(()=>{
 </script>
 
 <body >
-	<audio id="background-music">
+	<audio id="audio">
 		<source src="images/Westlife - Beautiful in White [1 HOUR].mp3" type="audio/mp3">
 	</audio>
 	
-	
 	<script>
-		var audio = document.getElementById("background-music");
-		var button = document.getElementById("audioControlButton");
-		var icon = document.getElementById("speaker-icon");
-	
-		// Function to toggle music playback
-		function toggleMusic() {
-			if (audio.paused) {
-				audio.play();
-				icon.classList.remove("fa-volume-up");
-				icon.classList.add("fa-pause"); // Change to pause icon
-			} else {
-				audio.pause();
-				icon.classList.remove("fa-pause");
-				icon.classList.add("fa-volume-up"); // Change back to play icon
-			}
-		}
+	document.addEventListener('DOMContentLoaded', function() {
+    const audio = document.getElementById('audio');
+    const playButton = document.getElementById('playButton');
+    const pauseButton = document.getElementById('pauseButton');
+    const playIcon = document.getElementById('playIcon');
+    const pauseIcon = document.getElementById('pauseIcon');
+
+    // Chức năng Play
+    function playMusic() {
+        audio.play();
+        playButton.disabled = true;  // Vô hiệu hóa nút play khi đang phát
+        pauseButton.disabled = false; // Bật nút pause khi nhạc đang phát
+        playIcon.style.display = 'none';  // Ẩn biểu tượng play
+        pauseIcon.style.display = 'inline'; // Hiển thị biểu tượng pause
+    }
+
+    // Chức năng Pause
+    function pauseMusic() {
+        audio.pause();
+        playButton.disabled = false;  // Bật nút play khi nhạc đang tạm dừng
+        pauseButton.disabled = true;  // Vô hiệu hóa nút pause khi nhạc đang tạm dừng
+        playIcon.style.display = 'inline';  // Hiển thị biểu tượng play
+        pauseIcon.style.display = 'none'; // Ẩn biểu tượng pause
+    }
+
+    // Gán sự kiện cho các nút
+    playButton.onclick = playMusic;
+    pauseButton.onclick = pauseMusic;
+});
+
 	</script>
 	
 	  
 	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/Anh7.jpg);" data-stellar-background-ratio="0.5">
 		<!-- <div class="overlay"></div> -->
 		<div class="container">
-			<!-- Speaker icon button -->
-			<button id="audioControlButton" onclick="toggleMusic()">
-				<i class="fas fa-volume-up" id="speaker-icon"></i> <!-- Font Awesome speaker icon -->
+
+			<button style="background: transparent;" id="playButton" onclick="playMusic()">
+				<img id="playIcon" src="images/audio.png" alt="Play Icon">
+			</button>
+			
+			<!-- Nút Pause -->
+			<button style="background: transparent;" id="pauseButton" onclick="pauseMusic()" disabled>
+				<img id="pauseIcon" src="images/mute.png" alt="Pause Icon">
 			</button>
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center">
