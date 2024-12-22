@@ -118,8 +118,7 @@ setInterval(()=>{
         audio.play();
         playButton.disabled = true;  // Vô hiệu hóa nút play khi đang phát
         pauseButton.disabled = false; // Bật nút pause khi nhạc đang phát
-        playIcon.style.display = 'none';  // Ẩn biểu tượng play
-        pauseIcon.style.display = 'inline'; // Hiển thị biểu tượng pause
+
     }
 
     // Chức năng Pause
@@ -127,8 +126,6 @@ setInterval(()=>{
         audio.pause();
         playButton.disabled = false;  // Bật nút play khi nhạc đang tạm dừng
         pauseButton.disabled = true;  // Vô hiệu hóa nút pause khi nhạc đang tạm dừng
-        playIcon.style.display = 'inline';  // Hiển thị biểu tượng play
-        pauseIcon.style.display = 'none'; // Ẩn biểu tượng pause
     }
 
     // Gán sự kiện cho các nút
@@ -148,7 +145,7 @@ setInterval(()=>{
 			</button>
 			
 			<!-- Nút Pause -->
-			<button style="background: transparent; border: transparent;" id="pauseButton" onclick="pauseMusic()" disabled>
+			<button style="background: transparent; border: transparent;" id="pauseButton" onclick="pauseMusic()" >
 				<img id="pauseIcon" src="images/mute.png" alt="Pause Icon">
 			</button>
 			<div class="row">
