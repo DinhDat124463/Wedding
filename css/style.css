@@ -1927,3 +1927,36 @@ form label {
   opacity: 1; /* Hiển thị */
   transform: translateY(0); /* Đưa lên */
 }
+
+.audio-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: transparent;
+  border-radius: 15px;
+  margin-top: 50px;
+}
+
+audio {
+  display: none; /* Ẩn phần tử audio */
+}
+
+.play-button {
+  background-color: #388e3c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.play-button:hover {
+  background-color: #2c6b2a; /* Màu sắc khi hover */
+}
+
+.play-button:focus {
+  outline: none;
+}

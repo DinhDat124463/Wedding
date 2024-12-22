@@ -36,6 +36,7 @@
 <meta property="og:image:alt" content="Anh Tuấn ❤️ Hương Ly">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Engagement" rel="stylesheet">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia+Sans+Condensed" rel="stylesheet">
@@ -101,53 +102,27 @@ setInterval(()=>{
 </script>
 
 <body >
-	<!-- <audio id="audio">
-		<source src="images/Westlife - Beautiful in White [1 HOUR].mp3" type="audio/mp3">
-	</audio>
-	 -->
-	<!-- <script>
-	document.addEventListener('DOMContentLoaded', function() {
-    const audio = document.getElementById('audio');
-    const playButton = document.getElementById('playButton');
-    const pauseButton = document.getElementById('pauseButton');
-    const playIcon = document.getElementById('playIcon');
-    const pauseIcon = document.getElementById('pauseIcon');
+	<script>
+		function toggleAudio() {
+    var audio = document.getElementById('audioPlayer');
+    var button = document.querySelector('.play-button');
+    var icon = button.querySelector('i'); // Lấy biểu tượng trong nút
 
-    // Chức năng Play
-    function playMusic() {
+    if (audio.paused) {
         audio.play();
-        playButton.disabled = true;  // Vô hiệu hóa nút play khi đang phát
-        pauseButton.disabled = false; // Bật nút pause khi nhạc đang phát
-
-    }
-
-    // Chức năng Pause
-    function pauseMusic() {
+        icon.classList.remove('fa-play');  // Xóa biểu tượng Play
+        icon.classList.add('fa-pause');    // Thêm biểu tượng Pause
+    } else {
         audio.pause();
-        playButton.disabled = false;  // Bật nút play khi nhạc đang tạm dừng
-        pauseButton.disabled = true;  // Vô hiệu hóa nút pause khi nhạc đang tạm dừng
+        icon.classList.remove('fa-pause'); // Xóa biểu tượng Pause
+        icon.classList.add('fa-play');     // Thêm biểu tượng Play
     }
-
-    // Gán sự kiện cho các nút
-    playButton.onclick = playMusic;
-    pauseButton.onclick = pauseMusic;
-});
-
-	</script> -->
+}
+	</script>
 	
-	  
 	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/Anh7.jpg);" data-stellar-background-ratio="0.5">
 		<!-- <div class="overlay"></div> -->
-		<div class="container">
-<!-- 
-			<button style="background: transparent; border: transparent;" id="playButton" onclick="playMusic()">
-				<img id="playIcon" src="images/audio.png" alt="Play Icon">
-			</button>
-			
-			 Nút Pause -->
-			<!-- <button style="background: transparent; border: transparent;" id="pauseButton" onclick="pauseMusic()" >
-				<img id="pauseIcon" src="images/mute.png" alt="Pause Icon">
-			</button> --> 
+		<div class="container">	
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center">
 					<div class="display-t">
@@ -162,11 +137,14 @@ setInterval(()=>{
 								<div style="text-align: center; font-size: 26px; border-bottom: 1px solid #000; padding: 10px;">									
 									<!-- <p style="font-weight: bold;font-size: 32px;   color: black; text-align: center;">THỨ 7 - 10H30</p> -->
 									<p style="font-weight: bold; font-size: 32px; color: black; text-align: center;">04.01.2025</p>
-										<audio controls autoplay> 
-											<source src="images/Westlife - Beautiful in White [1 HOUR].mp3" type="audio/ogg">										  
-										  </audio>
+									<div class="audio-container">
+										<audio id="audioPlayer" src="https://raw.githubusercontent.com/DinhDat124463/Wedding/main/images/TikTok.mp3" controls></audio>
+										<button class="play-button" onclick="toggleAudio()">
+											<i class="fas fa-play"></i> <!-- Biểu tượng Play -->
+										</button>
+									</div>
 								</div>
-								<div style="text-align: center; padding: 10px;">
+								<div style="text-align: center; padding: 10px; ">
 									
 								</div>
 							</div>															
