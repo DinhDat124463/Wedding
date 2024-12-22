@@ -98,13 +98,41 @@ setInterval(()=>{
 		<source src="images/TikTok.mp3" type="audio/mp3">
 	</audio>
 	
+	<div id="play-button" style="text-align:center; margin-top:20px;">
+		<button onclick="startMusic()">Bấm để bật nhạc 🎵</button>
+	</div>
+	
 	<script>
-		// Phát nhạc sau lần nhấn đầu tiên
+		function startMusic() {
+			const music = document.getElementById('background-music');
+			music.play().then(() => {
+				localStorage.setItem('musicEnabled', 'true');
+				document.getElementById('play-button').style.display = 'none'; // Ẩn nút sau khi bật nhạc
+			}).catch((error) => {
+				console.error("Không thể phát nhạc:", error);
+			});
+		}
+	
+		window.onload = function () {
+			const music = document.getElementById('background-music');
+	
+			// Kiểm tra nếu người dùng đã từng bật nhạc trước đó
+			if (localStorage.getItem('musicEnabled') === 'true') {
+				music.play().catch((error) => {
+					console.error("Trình duyệt chặn tự động phát:", error);
+				});
+				document.getElementById('play-button').style.display = 'none'; // Ẩn nút nếu nhạc tự động phát
+			}
+		};
+	
 		document.addEventListener("click", function () {
 			const music = document.getElementById('background-music');
-			music.play();
-		}, { once: true }); // Sự kiện này chỉ chạy 1 lần
+			music.play().then(() => {
+				localStorage.setItem('musicEnabled', 'true');
+			});
+		}, { once: true });
 	</script>
+	
 	
 
 	
