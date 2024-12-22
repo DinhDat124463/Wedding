@@ -95,43 +95,41 @@ setInterval(()=>{
 
 <body >
 	<audio id="background-music">
-		<source src="images/I-Do-911.mp3" type="audio/mp3">
-	</audio>	
+		<source src="images/Westlife - Beautiful in White [1 HOUR].mp3" type="audio/mp3">
+	</audio>
+	
 	<div id="play-button" style="text-align:center; margin-top:20px;">
-		<button onclick="startMusic()">Bấm để bật nhạc 🎵</button>
-	</div>	
+		<button id="play-music-button" onclick="startMusic()">Bấm để bật nhạc 🎵</button>
+	</div>
+	
 	<script>
 		function startMusic() {
 			const music = document.getElementById('background-music');
 			music.play().then(() => {
 				localStorage.setItem('musicEnabled', 'true');
-				document.getElementById('play-button').style.display = 'none'; // Ẩn nút sau khi bật nhạc
+				document.getElementById('play-button').style.display = 'none'; // Ẩn nút sau khi phát nhạc
 			}).catch((error) => {
 				console.error("Không thể phát nhạc:", error);
 			});
 		}
 	
 		window.onload = function () {
-			const music = document.getElementById('background-music');	
+			const music = document.getElementById('background-music');
+	
+			// Kiểm tra nếu người dùng đã từng bật nhạc trước đó
 			if (localStorage.getItem('musicEnabled') === 'true') {
 				music.play().catch((error) => {
-					console.error("Trình duyệt chsặn tự động phát:", error);
+					console.error("Trình duyệt chặn tự động phát:", error);
 				});
 				document.getElementById('play-button').style.display = 'none'; // Ẩn nút nếu nhạc tự động phát
+			} else {
+				// Giả lập sự kiện click vào nút sau khi trang tải xong
+				const button = document.getElementById('play-music-button');
+				button.click();
 			}
 		};
-	
-		document.addEventListener("click", function () {
-			const music = document.getElementById('background-music');
-			music.play().then(() => {
-				localStorage.setItem('musicEnabled', 'true');
-			});
-		}, { once: true });
 	</script>
-	
-	
 
-	
 	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/Anh7.jpg);" data-stellar-background-ratio="0.5">
 		<!-- <div class="overlay"></div> -->
 		<div class="container">
