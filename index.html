@@ -138,7 +138,7 @@ setInterval(()=>{
 									<!-- <p style="font-weight: bold;font-size: 32px;   color: black; text-align: center;">THỨ 7 - 10H30</p> -->
 									<p style="font-weight: bold; font-size: 32px; color: black; text-align: center;">04.01.2025</p>
 									<div class="audio-container">
-										<audio id="audioPlayer" src="images/Westlife - Beautiful in White [1 HOUR].mp3" controls></audio>
+										<audio id="audioPlayer" src="images/Westlife - Beautiful in White [1 HOUR].mp3" controls playsinline></audio>
 										<button class="play-button" onclick="toggleAudio()">
 											<i class="fas fa-play"></i> <!-- Biểu tượng Play -->
 										</button>
@@ -170,52 +170,54 @@ setInterval(()=>{
 			</div>
 			<div class="row">
 				<div class="display-t">
-					<div class="display-tc">
-						<div class="col-md-10 col-md-offset-1">
-							<div class="col-md-6 col-sm-6 text-center">
-								<div class="event-wrap animate-box">
-									<h3>Nhà trai</h3>
-									<div class="event-col">
-										<i class="icon-calendar"></i>
-										<span>04/01/2025</span>
-									</div>
-									<div class="event-col">
-
-										<i class="icon-clock"></i>
-										<span>11:30 AM</span>
-									</div>
-									<div class="address">
-										<p>SN 80 - Ngõ 60<br>
-										Đ.Đinh Tất Miễn - Phố Bắc Thành<br>
-										Phường Tân Thành - TP.Ninh Bình</p>
-									  </div>									  
-									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1238.7057256972228!2d105.96387586833367!3d20.26557026176905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313679fca25e223f%3A0xa4609aa112fff37!2zNjAgxJBpbmggVOG6pXQgTWnhu4VuLCBUw6JuIFRow6BuaCwgTmluaCBCw6xuaCwgVmnhu4d0IE5hbQ!5e1!3m2!1svi!2s!4v1734542350778!5m2!1svi!2s" width="300" height="200" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-								</div>
-							</div>
-							<div class="col-md-6 col-sm-6 text-center">
-								<div class="event-wrap animate-box">
-									<h3>Nhà gái</h3>
-									<div class="event-col">
-										<i class="icon-calendar"></i>
-										<span>04/01/2025</span>
-									</div>
-									<div class="event-col">
-
-										<i class="icon-clock"></i>
-										<span>10H30 PM</span>
-									</div>
-									<div class="address">
-										<p>Đối diện trường cấp 2 Gia Vân<br>
-										Thôn Phù Long - Xã Gia Vân<br>
-										Huyện Gia Viễn - Tỉnh Ninh Bình</p>
-									</div>
-									
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d620.6593329823157!2d105.87818873101557!3d20.3477887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313678acf8c00001%3A0x15a04d28c1e9f185!2zVHLGsOG7nW5nIFRIQ1MgR2lhIFbDom4!5e1!3m2!1svi!2s!4v1734542413208!5m2!1svi!2s" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-								</div>
-							</div>
+				  <div class="display-tc">
+					<div class="col-md-10 col-md-offset-1">
+					  <!-- Nhà trai -->
+					  <div class="col-md-6 col-sm-6 text-center">
+						<div class="event-wrap animate-box">
+						  <h3>Nhà trai</h3>
+						  <div class="event-col text-center" style="display: flex; justify-content: center; align-items: center; flex-direction: column; height: 100%;">
+							<i class="icon-calendar" style="font-size: 2rem; color: #388e3c; margin-bottom: 10px;"></i>
+							<span style="font-size: 1.5rem; font-weight: bold;">04/01/2025</span>
+						  </div>
+			  
+						  <div class="address" style="text-align: center; margin-top: 20px;">
+							<p style="font-size: 1rem; line-height: 1.5;">
+							  SN 80 - Ngõ 60<br>
+							  Đ.Đinh Tất Miễn - Phố Bắc Thành<br>
+							  Phường Tân Thành - TP.Ninh Bình
+							</p>
+						  </div>
+			  
+						  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1238.7057256972228!2d105.96387586833367!3d20.26557026176905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313679fca25e223f%3A0xa4609aa112fff37!2zNjAgxJBpbmggVOG6pXQgTWnhu4VuLCBUw6JuIFRow6BuaCwgTmluaCBCw6xuaCwgVmnhu4d0IE5hbQ!5e1!3m2!1svi!2s!4v1734542350778!5m2!1svi!2s" width="300" height="200" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 						</div>
+					  </div>
+			  
+					  <!-- Nhà gái -->
+					  <div class="col-md-6 col-sm-6 text-center">
+						<div class="event-wrap animate-box">
+						  <h3>Nhà gái</h3>
+						  <div class="event-col text-center" style="display: flex; justify-content: center; align-items: center; flex-direction: column; height: 100%;">
+							<i class="icon-calendar" style="font-size: 2rem; color: #388e3c; margin-bottom: 10px;"></i>
+							<span style="font-size: 1.5rem; font-weight: bold;">04/01/2025</span>
+						  </div>
+			  
+						  <div class="address" style="text-align: center; margin-top: 20px;">
+							<p style="font-size: 1rem; line-height: 1.5;">
+							  Đối diện trường cấp 2 Gia Vân<br>
+							  Thôn Phù Long - Xã Gia Vân<br>
+							  Huyện Gia Viễn - Tỉnh Ninh Bình
+							</p>
+						  </div>
+			  
+						  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d620.6593329823157!2d105.87818873101557!3d20.3477887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313678acf8c00001%3A0x15a04d28c1e9f185!2zVHLGsOG7nW5nIFRIQ1MgR2lhIFbDom4!5e1!3m2!1svi!2s!4v1734542413208!5m2!1svi!2s" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+						</div>
+					  </div>
 					</div>
+				  </div>
 				</div>
+			  </div>
+			  
 			</div>
 		</div>
 	</div>
