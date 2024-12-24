@@ -1942,8 +1942,21 @@ audio {
   display: none; /* Ẩn phần tử audio */
 }
 
+.date-text {
+  font-weight: bold;
+  font-size: 32px;
+  color: black;
+  text-align: center;
+  margin-bottom: 0px; /* Giảm khoảng cách với phần tử bên dưới */
+}
+
+.audio-container {
+  text-align: center;
+  margin-top: 0; /* Loại bỏ khoảng cách trên nếu cần */
+}
+
 .play-button {
-  background-color: #388e3c;
+  background-color: #388e3c;  
   color: white;
   border: none;
   padding: 10px 20px;
@@ -1951,12 +1964,15 @@ audio {
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-top: -15px; /* Điều chỉnh khoảng cách giữa nút và audio */
 }
 
 .play-button:hover {
-  background-color: #2c6b2a; /* Màu sắc khi hover */
+  background-color: #2c6b2a;
 }
 
 .play-button:focus {
   outline: none;
 }
+
+
